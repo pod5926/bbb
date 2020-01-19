@@ -1,0 +1,6 @@
+h1 編集
+
+.nav.justify-content-end
+  = link_to '一覧', books_path, class: 'nav-link'
+
+= render partial: 'form', locals: { book: @book }

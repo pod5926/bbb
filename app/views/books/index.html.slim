@@ -1,0 +1,19 @@
+h1 書籍一覧
+
+= link_to '新規登録', new_book_path, class: 'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th= Book.human_attribute_name(:name)
+      th= Book.human_attribute_name(:created_at)
+      th
+    tbody
+      - @books.each do |book|
+        tr
+          td= link_to book.name, book
+          td= book.created_at
+          td
+            = link_to '編集', edit_book_path(book), class: 'btn btn-primary mr-3'
+            = link_to '削除', book, method: :delete, data: { confirm: "「#{book.name}」を削除しますか？"}, class: 'btn btn-danger'

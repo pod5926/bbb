@@ -1,5 +1,13 @@
 # README
-書籍レビューアプリを作成したい
+書籍管理アプリを作成したい
+実装した
+・CRUD（テキスト体）
+実装したい機能
+・ユーザー登録
+・トップページ
+・画像（本の表紙）を一覧にしてみたい（grid的な）
+・デザイン面（優先度低）
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
