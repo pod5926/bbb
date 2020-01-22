@@ -12,12 +12,12 @@ table.table.table-hover
         td= @book.name
       tr
         th= Book.human_attribute_name(:comment)
-        td= simple_format(h(@book.comment), {}, sanitize: false, wrapper_tag: "div")
+        td= auto_link(simple_format(h(@book.comment), {}, sanitize: false, wrapper_tag: "div"))
       tr
         th= Book.human_attribute_name(:created_at)
         td= @book.created_at
       tr
         th= Book.human_attribute_name(:updated_at)
         td= @book.updated_at
-= link_to '編集', edit_book_path(book), class: 'btn btn-primary mr-3'
+= link_to '編集', edit_book_path, class: 'btn btn-primary mr-3'
 = link_to '削除', @book, method: :delete, data: { confirm: "「#{@book.name}」を削除しますか？"}, class: 'btn btn-danger'
